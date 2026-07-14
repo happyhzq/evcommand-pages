@@ -17,26 +17,33 @@
     <main>
       <article class="panel">
         <h1>EV Command Privacy Policy</h1>
-        <p>Last updated: May 26, 2026</p>
-        <p>EV Command helps electric vehicle owners monitor vehicle status, charging, battery health, trips, reminders and owner workflows. We design the app to keep personal data limited and transparent.</p>
+        <p>Last updated: July 14, 2026</p>
+        <p>EV Command helps electric vehicle owners view vehicle status and related owner information. This policy explains the account, vehicle and purchase data used by the current version.</p>
 
         <h2>Information We Collect</h2>
-        <p>Account information you enter, such as name, email and password, is currently stored locally on your device in this version. Vehicle, charging, trip and battery health screens use demo or user-entered data unless you explicitly connect a supported vehicle data source in a future release. Purchase status is handled through Apple In-App Purchase.</p>
+        <p>When you use Sign in with Apple, we receive a pseudonymous Apple account identifier and, if Apple provides them, your email address and display name. We store a one-way keyed representation of the Apple identifier, account details, hashed session credentials and security timestamps.</p>
+        <p>If you choose to connect Tesla, we store encrypted OAuth credentials and the granted scopes. We process the latest available vehicle identifier, VIN, display name, online state, battery level, estimated range, charging state, charge limit, lock state, odometer and cabin or outside temperature. EV Command does not request Tesla's vehicle-location scope, and the server discards latitude and longitude.</p>
 
         <h2>How We Use Information</h2>
-        <p>We use information to provide app features, remember your selected language, show membership status, support account creation, sign-in, sign-out and account deletion flows, and improve reliability. We do not sell personal information.</p>
+        <p>We use this information only to authenticate your account, maintain the optional Tesla connection, display requested vehicle information, prevent replay or abuse, provide support and operate app functionality. We do not sell personal information, use it for advertising or track you across other companies' apps or websites.</p>
 
         <h2>Vehicle Data</h2>
-        <p>EV Command is not affiliated with Tesla, Inc. The app does not require a Tesla account for the demo experience. If a future version adds vehicle API connection, the app will request authorization before accessing vehicle data and will describe the data used at that time.</p>
+        <p>EV Command is not affiliated with Tesla, Inc. Tesla connection is optional and uses Tesla's authorization screen. The current release requests read-only account and vehicle-data scopes and does not implement vehicle commands. Disconnecting Tesla removes the stored Tesla credentials, pending authorization state and cached vehicle snapshot from EV Command. You can also revoke consent through Tesla.</p>
+
+        <h2>Storage and Security</h2>
+        <p>The app stores its opaque session token in the iOS Keychain. The server stores only a hash of that token. Tesla access and refresh tokens are encrypted with authenticated encryption on the server. No method of storage is completely secure, but we limit retained fields and do not log raw tokens, Apple identifiers, email addresses, names or upstream response bodies.</p>
 
         <h2>Purchases</h2>
-        <p>EV Command Pro subscriptions and lifetime unlocks are processed by Apple. Apple may provide us with transaction identifiers and entitlement status so the app can unlock paid features.</p>
+        <p>EV Command Pro Lifetime is a one-time, non-consumable purchase processed by Apple. Apple provides verified entitlement status so the app can unlock paid features. EV Command does not receive your full payment-card details.</p>
 
-        <h2>Account Deletion</h2>
-        <p>You can delete the local EV Command account from the Account screen in the app. Deletion removes the locally stored account and membership display state from the app. If cloud account features are introduced later, this policy will be updated with the cloud deletion process.</p>
+        <h2 id="account-deletion">Account Deletion</h2>
+        <p>You can permanently delete your EV Command account from the Account screen in the app. The deletion transaction removes the account, sessions, Apple assertion fingerprints, pending Tesla authorization states, Tesla credentials and cached vehicle data. Deleting an EV Command account does not cancel or erase purchases managed by Apple.</p>
+
+        <h2>Demo Mode</h2>
+        <p>You can explore an explicitly labeled demo mode without connecting Tesla. Demo values are sample fixtures and are not associated with your vehicle.</p>
 
         <h2>Contact</h2>
-        <p>For privacy questions, contact support through the <a href="./support.html">EV Command support page</a>.</p>
+        <p>For privacy questions or a deletion issue, email <a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a> or use the <a href="./support.html">EV Command support page</a>.</p>
       </article>
     </main>
   </body>
