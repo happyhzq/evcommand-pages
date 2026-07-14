@@ -1,49 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EV Command Privacy Policy</title>
-    <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; background: #f5f7fa; }
-      main { max-width: 920px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
-      .panel { background: #fff; border: 1px solid #dbe3ea; border-radius: 8px; padding: 28px; }
-      h1, h2 { line-height: 1.2; }
-      h2 { margin-top: 28px; }
-      a { color: #0f766e; }
-    </style>
+    <meta name="theme-color" content="#171a20" />
+    <meta
+      name="description"
+      content="EV Command helps electric vehicle owners view vehicle status and related owner information. This policy explains the account, vehicle and purchase data used by the current version."
+      data-i18n-content="privacy.description"
+    />
+    <title data-i18n="privacy.title">EV Command Privacy Policy</title>
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./site.js" defer></script>
   </head>
-  <body>
-    <main>
-      <article class="panel">
-        <h1>EV Command Privacy Policy</h1>
-        <p>Last updated: July 14, 2026</p>
-        <p>EV Command helps electric vehicle owners view vehicle status and related owner information. This policy explains the account, vehicle and purchase data used by the current version.</p>
+  <body data-page="privacy">
+    <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">EV</span>
+          <span data-i18n="common.brand">EV Command</span>
+        </a>
+        <nav
+          class="site-nav"
+          aria-label="Primary navigation"
+          data-i18n-aria-label="common.primaryNavigation"
+        >
+          <a class="nav-link" href="./index.html" data-i18n="nav.home">Home</a>
+          <a class="nav-link" href="./marketing.html" data-i18n="nav.product">Product</a>
+          <a class="nav-link" href="./privacy.html" aria-current="page" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="./support.html" data-i18n="nav.support">Support</a>
+          <a class="nav-link" href="./terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <div class="locale-control">
+          <label class="visually-hidden" for="locale-switcher" data-i18n="common.language">Language</label>
+          <select
+            id="locale-switcher"
+            aria-label="Language"
+            data-i18n-aria-label="common.language"
+          >
+            <option value="en-US" lang="en-US">English</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+            <option value="yue-Hant-HK" lang="yue-Hant-HK">廣東話</option>
+            <option value="ko" lang="ko">한국어</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="es-ES" lang="es-ES">Español</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <article class="document">
+        <p class="eyebrow" data-i18n="privacy.eyebrow">Legal information</p>
+        <h1 data-i18n="privacy.heading">EV Command Privacy Policy</h1>
+        <p class="updated" data-i18n="privacy.updated">Last updated: July 14, 2026</p>
+        <p class="lead" data-i18n="privacy.intro">EV Command helps electric vehicle owners view vehicle status and related owner information. This policy explains the account, vehicle and purchase data used by the current version.</p>
 
-        <h2>Information We Collect</h2>
-        <p>When you use Sign in with Apple, we receive a pseudonymous Apple account identifier and, if Apple provides them, your email address and display name. We store a one-way keyed representation of the Apple identifier, account details, hashed session credentials and security timestamps.</p>
-        <p>If you choose to connect Tesla, we store encrypted OAuth credentials and the granted scopes. We process the latest available vehicle identifier, VIN, display name, online state, battery level, estimated range, charging state, charge limit, lock state, odometer and cabin or outside temperature. EV Command does not request Tesla's vehicle-location scope, and the server discards latitude and longitude.</p>
+        <h2 data-i18n="privacy.collect.heading">Information We Collect</h2>
+        <p data-i18n="privacy.collect.p1">When you use Sign in with Apple, we receive a pseudonymous Apple account identifier and, if Apple provides them, your email address and display name. We store a one-way keyed representation of the Apple identifier, account details, hashed session credentials, an encrypted Apple refresh token and security timestamps.</p>
+        <p data-i18n="privacy.collect.p2">If you choose to connect Tesla, we store encrypted OAuth credentials and the granted scopes. We process the latest available vehicle identifier, VIN, display name, online state, battery level, estimated range, charging state, charge limit, lock state, odometer and cabin or outside temperature. EV Command does not request Tesla's vehicle-location scope, and the server discards latitude and longitude.</p>
 
-        <h2>How We Use Information</h2>
-        <p>We use this information only to authenticate your account, maintain the optional Tesla connection, display requested vehicle information, prevent replay or abuse, provide support and operate app functionality. We do not sell personal information, use it for advertising or track you across other companies' apps or websites.</p>
+        <h2 data-i18n="privacy.use.heading">How We Use Information</h2>
+        <p data-i18n="privacy.use.p1">We use this information only to authenticate your account, maintain the optional Tesla connection, display requested vehicle information, prevent replay or abuse, provide support and operate app functionality. We do not sell personal information, use it for advertising or track you across other companies' apps or websites.</p>
 
-        <h2>Vehicle Data</h2>
-        <p>EV Command is not affiliated with Tesla, Inc. Tesla connection is optional and uses Tesla's authorization screen. The current release requests read-only account and vehicle-data scopes and does not implement vehicle commands. Disconnecting Tesla removes the stored Tesla credentials, pending authorization state and cached vehicle snapshot from EV Command. You can also revoke consent through Tesla.</p>
+        <h2 data-i18n="privacy.vehicle.heading">Vehicle Data</h2>
+        <p data-i18n="privacy.vehicle.p1">EV Command is not affiliated with Tesla, Inc. Tesla connection is optional and uses Tesla's authorization screen. The current release requests read-only account and vehicle-data scopes and does not implement vehicle commands. Successful vehicle lists and snapshots may be cached to preserve clear availability status: data up to 15 minutes old is labeled cached, data over 15 minutes and up to 6 hours old is labeled stale, and older data is not returned. An hourly server maintenance task removes vehicle cache records after that 6-hour window.</p>
+        <p data-i18n="privacy.vehicle.p2">Disconnecting Tesla removes the stored Tesla credentials, pending authorization state and cached vehicle lists and snapshots from EV Command. The app provides a separate Manage Tesla consent action that opens Tesla's consent-management page so you can modify scopes or revoke Tesla's authorization.</p>
 
-        <h2>Storage and Security</h2>
-        <p>The app stores its opaque session token in the iOS Keychain. The server stores only a hash of that token. Tesla access and refresh tokens are encrypted with authenticated encryption on the server. No method of storage is completely secure, but we limit retained fields and do not log raw tokens, Apple identifiers, email addresses, names or upstream response bodies.</p>
+        <h2 data-i18n="privacy.storage.heading">Storage and Security</h2>
+        <p data-i18n="privacy.storage.p1">The app stores its opaque session token in the iOS Keychain. The server stores only a hash of that token. Apple and Tesla refresh tokens are encrypted with authenticated encryption on the server. No method of storage is completely secure, but we limit retained fields and do not log raw tokens, Apple identifiers, email addresses, names or upstream response bodies.</p>
+        <p data-i18n="privacy.storage.p2">If EV Command Pro is active, the app can retain up to 180 requested vehicle snapshots in protected Application Support storage on the device. History is separated by a one-way hash of the random EV Command account ID; the account ID is not used as a plaintext filename. Each history file uses complete iOS file protection and is excluded from device backups. This history includes the vehicle identifier, VIN, timestamps, source and freshness labels, vehicle state, battery level, estimated range, charging state, charge limit, lock state, odometer and cabin or outside temperature. It does not include latitude or longitude. Signing out or losing authorization clears applicable local history. Disconnecting Tesla and deleting the account clear applicable local history after the server confirms the remote action, so a failed remote request does not destroy history.</p>
 
-        <h2>Purchases</h2>
-        <p>EV Command Pro Lifetime is a one-time, non-consumable purchase processed by Apple. Apple provides verified entitlement status so the app can unlock paid features. EV Command does not receive your full payment-card details.</p>
+        <h2 data-i18n="privacy.purchases.heading">Purchases</h2>
+        <p data-i18n="privacy.purchases.p1">EV Command Pro Lifetime is a one-time, non-consumable purchase processed by Apple. Apple provides verified entitlement status so the app can unlock paid features. EV Command does not receive your full payment-card details.</p>
 
-        <h2 id="account-deletion">Account Deletion</h2>
-        <p>You can permanently delete your EV Command account from the Account screen in the app. The deletion transaction removes the account, sessions, Apple assertion fingerprints, pending Tesla authorization states, Tesla credentials and cached vehicle data. Deleting an EV Command account does not cancel or erase purchases managed by Apple.</p>
+        <h2 id="account-deletion" data-i18n="privacy.deletion.heading">Account Deletion</h2>
+        <p data-i18n="privacy.deletion.p1">You can permanently delete your EV Command account from Account &gt; Delete account in the app. Before deletion, the app requires a fresh Sign in with Apple confirmation, verifies that the fresh identity token identifies the signed-in account, and records a deletion-protection tombstone plus an authenticated operation result. It then attempts to exchange the authorization code and revoke the returned refresh token before removing the account, sessions, Apple assertion fingerprints, encrypted Apple refresh token, pending Tesla authorization states, Tesla credentials and cached vehicle data. Once the tombstone is recorded, every request for the deleted internal account is rejected even if physical database cleanup is interrupted; startup, sign-in and hourly maintenance reconcile any remaining rows. A rejected or stale confirmation does not sign you out. The app retains a random, status-only deletion-operation credential in the iOS Keychain until the server result and local cleanup are confirmed; it does not authorize account access. If the response is interrupted, the app queries that result before deciding whether to clear local history. If Apple token exchange or revocation cannot be confirmed, EV Command still deletes the account and local history, then stores a persistent on-device reminder that links to Apple's official instructions for manually stopping use of Sign in with Apple. Deleting an EV Command account does not cancel or erase purchases managed by Apple.</p>
+        <p data-i18n="privacy.deletion.p2">To prevent an older database backup from recreating a deleted account, a separate deletion-protection ledger retains a SHA-256 hash of the random internal EV Command user ID and deletion timestamp. For 24 hours after a deletion attempt, it also retains a random operation ID, hashed operation secret, hashed internal user ID, status, optional random receipt and timestamps; hourly maintenance removes that operation record after the status window expires. These records contain no Apple identifier, email, name, Tesla account identifier, VIN, vehicle data, session or provider token and cannot be used to restore or access the account.</p>
+        <p data-i18n="privacy.deletion.p3">To authenticate and deduplicate Sign in with Apple server notifications, EV Command stores a SHA-256 hash of the notification ID, the event type, event time, receipt time and processing state. It does not store the notification payload or Apple account identifier in this record. Hourly maintenance removes completed records after seven days.</p>
 
-        <h2>Demo Mode</h2>
-        <p>You can explore an explicitly labeled demo mode without connecting Tesla. Demo values are sample fixtures and are not associated with your vehicle.</p>
+        <h2 data-i18n="privacy.demo.heading">Demo Mode</h2>
+        <p data-i18n="privacy.demo.p1">You can explore an explicitly labeled demo mode without connecting Tesla. Demo values are sample fixtures and are not associated with your vehicle.</p>
 
-        <h2>Contact</h2>
-        <p>For privacy questions or a deletion issue, email <a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a> or use the <a href="./support.html">EV Command support page</a>.</p>
+        <h2 data-i18n="privacy.contact.heading">Contact</h2>
+        <p data-i18n-group="privacy.contact">
+          <span data-i18n="privacy.contact.beforeEmail">For privacy questions or a deletion issue, email </span><a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a><span data-i18n="privacy.contact.between"> or use the </span><a href="./support.html" data-i18n="privacy.contact.link">EV Command support page</a><span data-i18n="privacy.contact.after">.</span>
+        </p>
       </article>
     </main>
   </body>

@@ -1,30 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EV Command Product Overview</title>
-    <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; background: #f5f7fa; }
-      main { max-width: 920px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
-      .panel { background: #fff; border: 1px solid #dbe3ea; border-radius: 8px; padding: 28px; }
-      ul { padding-left: 20px; }
-    </style>
+    <meta name="theme-color" content="#171a20" />
+    <meta
+      name="description"
+      content="A multilingual, read-only EV companion with optional Tesla Fleet API monitoring and a clearly separated demo mode."
+      data-i18n-content="marketing.description"
+    />
+    <title data-i18n="marketing.title">EV Command Product Overview</title>
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./site.js" defer></script>
   </head>
-  <body>
-    <main>
-      <section class="panel">
-        <h1>EV Command</h1>
-        <p>A multilingual, read-only EV companion with optional Tesla Fleet API monitoring and a clearly separated demo mode.</p>
-        <ul>
-          <li>View supported Tesla battery, range, charging, lock, odometer and temperature fields.</li>
-          <li>Distinguish live, cached, stale, unavailable and demo data at a glance.</li>
-          <li>Create, access, sign out and delete an EV Command account with Sign in with Apple.</li>
-          <li>Keep vehicle access read-only; this release does not send remote commands.</li>
-          <li>Unlock advanced battery diagnostics with EV Command Pro.</li>
-          <li>Switch between English, Simplified Chinese, Cantonese, Korean, Japanese and Spanish.</li>
+  <body data-page="product">
+    <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">EV</span>
+          <span data-i18n="common.brand">EV Command</span>
+        </a>
+        <nav
+          class="site-nav"
+          aria-label="Primary navigation"
+          data-i18n-aria-label="common.primaryNavigation"
+        >
+          <a class="nav-link" href="./index.html" data-i18n="nav.home">Home</a>
+          <a class="nav-link" href="./marketing.html" aria-current="page" data-i18n="nav.product">Product</a>
+          <a class="nav-link" href="./privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="./support.html" data-i18n="nav.support">Support</a>
+          <a class="nav-link" href="./terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <div class="locale-control">
+          <label class="visually-hidden" for="locale-switcher" data-i18n="common.language">Language</label>
+          <select
+            id="locale-switcher"
+            aria-label="Language"
+            data-i18n-aria-label="common.language"
+          >
+            <option value="en-US" lang="en-US">English</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+            <option value="yue-Hant-HK" lang="yue-Hant-HK">廣東話</option>
+            <option value="ko" lang="ko">한국어</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="es-ES" lang="es-ES">Español</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <article class="document">
+        <p class="eyebrow" data-i18n="marketing.eyebrow">Product overview</p>
+        <h1 data-i18n="marketing.heading">EV Command</h1>
+        <p class="lead" data-i18n="marketing.intro">
+          A multilingual, read-only EV companion with optional Tesla Fleet API monitoring and a clearly separated demo mode.
+        </p>
+        <ul class="feature-list">
+          <li data-i18n="marketing.feature1">View supported Tesla battery, range, charging, lock, odometer and temperature fields.</li>
+          <li data-i18n="marketing.feature2">Distinguish live, cached, stale, unavailable and demo data at a glance.</li>
+          <li data-i18n="marketing.feature3">Create, access, sign out and delete an EV Command account with Sign in with Apple.</li>
+          <li data-i18n="marketing.feature4">Keep vehicle access read-only; this release does not send remote commands.</li>
+          <li data-i18n="marketing.feature5">Disconnect local Tesla data or open Tesla's consent page to revoke authorization.</li>
+          <li data-i18n="marketing.feature6">Use EV Command Pro to keep up to 180 coordinate-free, account-isolated vehicle snapshots on the device and export real or clearly labeled sample history as CSV.</li>
+          <li data-i18n="marketing.feature7">Switch between English, Simplified Chinese, Cantonese, Korean, Japanese and Spanish.</li>
         </ul>
-      </section>
+      </article>
     </main>
   </body>
 </html>

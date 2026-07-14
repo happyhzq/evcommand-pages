@@ -1,30 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EV Command Support</title>
-    <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; background: #f5f7fa; }
-      main { max-width: 920px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
-      .panel { background: #fff; border: 1px solid #dbe3ea; border-radius: 8px; padding: 28px; }
-      h1, h2 { line-height: 1.2; }
-      a { color: #0f766e; }
-    </style>
+    <meta name="theme-color" content="#171a20" />
+    <meta
+      name="description"
+      content="Support information for EV Command accounts, Tesla connection, languages, purchases, vehicle data and privacy."
+      data-i18n-content="support.description"
+    />
+    <title data-i18n="support.title">EV Command Support</title>
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./site.js" defer></script>
   </head>
-  <body>
-    <main>
-      <section class="panel">
-        <h1>EV Command Support</h1>
-        <p>Need help with EV Command? Email <a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a>.</p>
-        <h2>Common Topics</h2>
-        <p>Account: use Sign in with Apple to create or access an EV Command account. You can sign out or permanently delete the account from the Account screen.</p>
-        <p>Tesla connection: sign in to EV Command first, then authorize optional read-only Fleet API access from Settings. Disconnecting removes EV Command's stored Tesla credentials and cached vehicle snapshot.</p>
-        <p>Language: choose English, Simplified Chinese, Cantonese, Korean, Japanese or Spanish from Settings.</p>
-        <p>Purchases: use the Membership screen to buy or restore the one-time EV Command Pro Lifetime unlock through Apple In-App Purchase. Deleting an EV Command account does not remove Apple-managed purchases.</p>
-        <p>Vehicle data: live, cached, stale, unavailable and demo states are labeled separately. Demo data does not require a Tesla account and never represents your vehicle.</p>
-        <p>Privacy: review the <a href="./privacy.html">Privacy Policy</a> for collected fields, security and deletion details.</p>
-      </section>
+  <body data-page="support">
+    <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">EV</span>
+          <span data-i18n="common.brand">EV Command</span>
+        </a>
+        <nav
+          class="site-nav"
+          aria-label="Primary navigation"
+          data-i18n-aria-label="common.primaryNavigation"
+        >
+          <a class="nav-link" href="./index.html" data-i18n="nav.home">Home</a>
+          <a class="nav-link" href="./marketing.html" data-i18n="nav.product">Product</a>
+          <a class="nav-link" href="./privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="./support.html" aria-current="page" data-i18n="nav.support">Support</a>
+          <a class="nav-link" href="./terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <div class="locale-control">
+          <label class="visually-hidden" for="locale-switcher" data-i18n="common.language">Language</label>
+          <select
+            id="locale-switcher"
+            aria-label="Language"
+            data-i18n-aria-label="common.language"
+          >
+            <option value="en-US" lang="en-US">English</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+            <option value="yue-Hant-HK" lang="yue-Hant-HK">廣東話</option>
+            <option value="ko" lang="ko">한국어</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="es-ES" lang="es-ES">Español</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <article class="document">
+        <p class="eyebrow" data-i18n="support.eyebrow">Help and support</p>
+        <h1 data-i18n="support.heading">EV Command Support</h1>
+        <p class="lead" data-i18n-group="support.intro">
+          <span data-i18n="support.intro.beforeEmail">Need help with EV Command? Email </span><a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a><span data-i18n="support.intro.after">.</span>
+        </p>
+        <h2 data-i18n="support.topics.heading">Common Topics</h2>
+        <div class="support-topics">
+          <p data-i18n-group="support.account">
+            <strong class="topic-label" data-i18n="support.account.label">Account</strong>
+            <span data-i18n="support.account.text">Use Sign in with Apple to create or access an EV Command account. You can sign out or permanently delete the account from Account. Deletion requires a fresh Apple confirmation, records durable deletion protection, and then attempts to revoke the resulting Apple credential before removing the EV Command cloud account and associated data. A rejected confirmation does not sign you out. If the response is interrupted, the app uses a status-only operation credential in the iOS Keychain to confirm the server result before clearing local history. If Apple revocation cannot be confirmed, account deletion still completes and the app keeps a persistent on-device link to Apple's official manual revocation instructions.</span>
+            <a href="https://support.apple.com/102571" rel="noreferrer" data-i18n="support.account.appleLink">Manage Sign in with Apple on Apple's support site</a>
+          </p>
+          <p data-i18n-group="support.tesla">
+            <strong class="topic-label" data-i18n="support.tesla.label">Tesla connection</strong>
+            <span data-i18n="support.tesla.text">Sign in to EV Command first, then authorize optional read-only Fleet API access from Settings. Disconnect removes EV Command's stored Tesla credentials and cached vehicle data. Manage Tesla consent opens Tesla's own consent page, where you can modify scopes or revoke Tesla's authorization.</span>
+          </p>
+          <p data-i18n-group="support.language">
+            <strong class="topic-label" data-i18n="support.language.label">Language</strong>
+            <span data-i18n="support.language.text">Choose English, Simplified Chinese, Cantonese, Korean, Japanese or Spanish from Settings.</span>
+          </p>
+          <p data-i18n-group="support.purchases">
+            <strong class="topic-label" data-i18n="support.purchases.label">Purchases</strong>
+            <span data-i18n="support.purchases.text">Use the Membership screen to buy or restore the one-time EV Command Pro Lifetime unlock through Apple In-App Purchase. Pro retains up to 180 coordinate-free vehicle snapshots in protected, backup-excluded, account-isolated storage on the device and enables CSV export. The labeled sample history can be exported after Pro is active without connecting Tesla. Deleting an EV Command account does not remove Apple-managed purchases.</span>
+          </p>
+          <p data-i18n-group="support.vehicle">
+            <strong class="topic-label" data-i18n="support.vehicle.label">Vehicle data</strong>
+            <span data-i18n="support.vehicle.text">Live, cached, stale, unavailable and demo states are labeled separately. Cached data is no more than 15 minutes old; stale data is over 15 minutes and no more than 6 hours old. Older data is not returned and is removed by hourly server maintenance. Demo data does not require a Tesla account and never represents your vehicle.</span>
+          </p>
+          <p data-i18n-group="support.privacy">
+            <strong class="topic-label" data-i18n="support.privacy.label">Privacy</strong>
+            <span data-i18n="support.privacy.beforeLink">Review the </span><a href="./privacy.html" data-i18n="support.privacy.link">Privacy Policy</a><span data-i18n="support.privacy.afterLink"> for collected fields, security and deletion details.</span>
+          </p>
+        </div>
+      </article>
     </main>
   </body>
 </html>

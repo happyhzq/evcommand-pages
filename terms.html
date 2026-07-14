@@ -1,35 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>EV Command Terms of Use</title>
-    <style>
-      body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; background: #f5f7fa; }
-      main { max-width: 920px; margin: 0 auto; padding: 40px 20px; line-height: 1.7; }
-      .panel { background: #fff; border: 1px solid #dbe3ea; border-radius: 8px; padding: 28px; }
-      h1, h2 { line-height: 1.2; }
-      a { color: #0f766e; }
-    </style>
+    <meta name="theme-color" content="#171a20" />
+    <meta
+      name="description"
+      content="Terms governing EV Command's optional read-only vehicle monitoring, demo information and owner tools."
+      data-i18n-content="terms.description"
+    />
+    <title data-i18n="terms.title">EV Command Terms of Use</title>
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./site.js" defer></script>
   </head>
-  <body>
-    <main>
-      <article class="panel">
-        <h1>EV Command Terms of Use</h1>
-        <p>Last updated: July 14, 2026</p>
-        <p>EV Command provides optional read-only vehicle monitoring, clearly labeled demo information and owner tools for informational use. EV Command is not affiliated with Tesla, Inc. or any vehicle manufacturer.</p>
-        <h2>Use of the App</h2>
-        <p>Do not rely on EV Command as the sole source for driving, charging, safety, service or emergency decisions. Always follow your vehicle's official displays, manuals and service guidance.</p>
-        <h2>Accounts and Vehicle Connection</h2>
-        <p>An EV Command account uses Sign in with Apple. Connecting Tesla is optional and requires your consent on Tesla's authorization screen. The current release requests read-only data access and does not send vehicle commands. You are responsible for protecting access to your device and accounts.</p>
-        <h2>Data Accuracy and Availability</h2>
-        <p>Live and cached states are labeled in the app. Vehicle data may be delayed, unavailable or incomplete because of vehicle sleep, network conditions, regional API availability or third-party services. Demo values are sample fixtures and do not describe your vehicle.</p>
-        <h2>Paid Features</h2>
-        <p>EV Command Pro Lifetime is a one-time non-consumable purchase through Apple In-App Purchase and does not auto-renew. Apple manages payment, restoration and refund eligibility.</p>
-        <h2>Account Deletion</h2>
-        <p>You can delete your EV Command cloud account from the Account screen. Deletion removes EV Command account and connected-vehicle records, but does not cancel or delete purchases managed by Apple.</p>
-        <h2>Contact</h2>
-        <p>For support, email <a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a>.</p>
+  <body data-page="terms">
+    <a class="skip-link" href="#main-content" data-i18n="common.skip">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand-link" href="./index.html">
+          <span class="brand-mark" aria-hidden="true">EV</span>
+          <span data-i18n="common.brand">EV Command</span>
+        </a>
+        <nav
+          class="site-nav"
+          aria-label="Primary navigation"
+          data-i18n-aria-label="common.primaryNavigation"
+        >
+          <a class="nav-link" href="./index.html" data-i18n="nav.home">Home</a>
+          <a class="nav-link" href="./marketing.html" data-i18n="nav.product">Product</a>
+          <a class="nav-link" href="./privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a class="nav-link" href="./support.html" data-i18n="nav.support">Support</a>
+          <a class="nav-link" href="./terms.html" aria-current="page" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <div class="locale-control">
+          <label class="visually-hidden" for="locale-switcher" data-i18n="common.language">Language</label>
+          <select
+            id="locale-switcher"
+            aria-label="Language"
+            data-i18n-aria-label="common.language"
+          >
+            <option value="en-US" lang="en-US">English</option>
+            <option value="zh-Hans" lang="zh-Hans">简体中文</option>
+            <option value="yue-Hant-HK" lang="yue-Hant-HK">廣東話</option>
+            <option value="ko" lang="ko">한국어</option>
+            <option value="ja" lang="ja">日本語</option>
+            <option value="es-ES" lang="es-ES">Español</option>
+          </select>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <article class="document">
+        <p class="eyebrow" data-i18n="terms.eyebrow">Legal information</p>
+        <h1 data-i18n="terms.heading">EV Command Terms of Use</h1>
+        <p class="updated" data-i18n="terms.updated">Last updated: July 14, 2026</p>
+        <p class="lead" data-i18n="terms.intro">EV Command provides optional read-only vehicle monitoring, clearly labeled demo information and owner tools for informational use. EV Command is not affiliated with Tesla, Inc. or any vehicle manufacturer.</p>
+        <h2 data-i18n="terms.use.heading">Use of the App</h2>
+        <p data-i18n="terms.use.p1">Do not rely on EV Command as the sole source for driving, charging, safety, service or emergency decisions. Always follow your vehicle's official displays, manuals and service guidance.</p>
+        <h2 data-i18n="terms.accounts.heading">Accounts and Vehicle Connection</h2>
+        <p data-i18n="terms.accounts.p1">An EV Command account uses Sign in with Apple. Connecting Tesla is optional and requires your consent on Tesla's authorization screen. The current release requests read-only data access and does not send vehicle commands. You are responsible for protecting access to your device and accounts.</p>
+        <h2 data-i18n="terms.accuracy.heading">Data Accuracy and Availability</h2>
+        <p data-i18n="terms.accuracy.p1">Live, cached and stale states are labeled in the app. Cached data is no more than 15 minutes old; stale data is over 15 minutes and no more than 6 hours old. Older data is not returned and is removed by hourly server maintenance. Vehicle data may be delayed, unavailable or incomplete because of vehicle sleep, network conditions, regional API availability or third-party services. Demo values are sample fixtures and do not describe your vehicle.</p>
+        <h2 data-i18n="terms.paid.heading">Paid Features</h2>
+        <p data-i18n="terms.paid.p1">EV Command Pro Lifetime is a one-time non-consumable purchase through Apple In-App Purchase and does not auto-renew. It unlocks up to 180 coordinate-free vehicle snapshots stored in protected, backup-excluded storage on the device and CSV export. Any observed 100% range is an extrapolation of the latest displayed range, not a battery-capacity or SOH diagnosis. Apple manages payment, restoration and refund eligibility.</p>
+        <h2 data-i18n="terms.deletion.heading">Account Deletion</h2>
+        <p data-i18n="terms.deletion.p1">You can delete your EV Command cloud account from Account &gt; Delete account. The app requires a fresh Sign in with Apple confirmation, records durable deletion protection, and then attempts to revoke the resulting Apple credential before removing the account and connected-vehicle records. A rejected confirmation does not sign you out. If the response is interrupted, the app verifies the authenticated deletion-operation result before clearing local history. If Apple revocation cannot be confirmed, account deletion still completes and the app keeps a persistent on-device link to Apple's official manual revocation instructions. Separate pseudonymous deletion-protection records prevent an old backup from recreating a successfully deleted account. Deletion does not cancel or delete purchases managed by Apple.</p>
+        <h2 data-i18n="terms.contact.heading">Contact</h2>
+        <p data-i18n-group="terms.contact">
+          <span data-i18n="terms.contact.beforeEmail">For support, email </span><a href="mailto:zhiqiangho@hotmail.com">zhiqiangho@hotmail.com</a><span data-i18n="terms.contact.after">.</span>
+        </p>
       </article>
     </main>
   </body>
